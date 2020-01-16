@@ -63,7 +63,7 @@ while True:
         
 for i in range (0, 2):
     if matches[best_match_index]:
-        playsound('/home/fiftycentsjj/Downloads/programming_practice/python/bluetooth/TwinkleTwinkleLittleStar.mp3')
+        playsound('path of the mp3')
             
 
 
