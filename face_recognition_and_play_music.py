@@ -52,6 +52,7 @@ while True:
         best_match_index = np.argmin(face_distances)
         if matches[best_match_index]:
             name = known_face_names[best_match_index]
+            playsound('/home/fiftycentsjj/Downloads/programming_practice/python/bluetooth/TwinkleTwinkleLittleStar.mp3')
 
         # Draw a box around the face
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
@@ -60,20 +61,19 @@ while True:
         cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
-        
-for i in range (0, 2):
-    if matches[best_match_index]:
-        playsound('path of the mp3')
-            
 
 
     # Display the resulting image
     cv2.imshow('Video', frame)
+    
 
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
+
+
 # Release handle to the webcam
 video_capture.release()
 cv2.destroyAllWindows()
+
