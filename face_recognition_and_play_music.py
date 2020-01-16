@@ -77,9 +77,3 @@ for i in range (0, 2):
 # Release handle to the webcam
 video_capture.release()
 cv2.destroyAllWindows()
-
-'''
-# try to process it next
-if name == known_face_names["Hi, Pikacu is here"]:
-    print('everything is fine')
-'''
